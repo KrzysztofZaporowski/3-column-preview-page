@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Gold_500: hsl(31, 77%, 52%);
+    --Cyan_800: hsl(184, 100%, 22%);
+    --Green_950: hsl(179, 100%, 13%);
+    --Transparent_white: hsla(0, 0%, 100%, 0.75); /*(paragraphs) */
+    --Gray_100: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+body {
+    align-items: center;
+    background-color: var(--Gray_100);
+    color: var(--Transparent_white);
+    display: flex;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.main-container {
+    border-radius: 15px;
+    display: flex;
+    height: 60%;
+    max-width: 1200px;
+    overflow: hidden;
+    width: 80%;
+}
+
+.card {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.info img {
+    display: block;
+    height: 40px;
+    width: 64px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#sedan button:hover,
+#suv button:hover,
+#luxury button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+#sedan {
+    background-color: var(--Gold_500);
+}
+
+#sedan button {
+    color: var(--Gold_500);
+}
+
+#suv {
+    background-color: var(--Cyan_800);
+}
+
+#suv button{
+    color: var(--Cyan_800);
+}   
+
+#luxury {
+    background-color: var(--Green_950);
+}
+
+#luxury button {
+    color: var(--Green_950);
+}
+
+@media (max-width: 790px) {
+    body {
+        display: block;
+        padding: 20px;
+    }
+    .main-container {
+        flex-direction: column;
+        margin: 10px auto;
+        height: auto;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .info img {
+        height: 30px;
+        width: 48px;
+    }
+}
